@@ -93,6 +93,7 @@ li {
 .textos-about .p1 {
   font-size: 26px;
   font-weight: 500;
+  width: 60%;
   color: #2F2105;
 }
 
@@ -179,7 +180,7 @@ li {
   text-align: center;
   justify-content: center;
   /* margin-right: 10%; */
-  width: 80%;
+  width: 100%;
 
 }
 
@@ -196,6 +197,10 @@ li {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  border-radius: 100%;
+  
 }
 
 .arrow-right {
@@ -211,7 +216,9 @@ li {
   display: flex;
   transition: transform 0.5s ease;
   gap: 20px;
-  width: 100%;
+  width: 80%;
+  position: relative;
+  margin-right: 10%;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -236,6 +243,7 @@ li {
   align-items: center;
 }
 
+
 .infors p {
   padding: 8px;
   position: relative;
@@ -252,6 +260,12 @@ li {
   font-size: 16px;
   margin: 5px 0;
   color: #333;
+}
+
+.review{
+  width: 250px;
+  font-size: 14px;
+  margin: 3px;
 }
 
 .person {

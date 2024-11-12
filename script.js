@@ -2,7 +2,7 @@ const imgs = document.getElementById("carousel-images");
 const img = document.querySelectorAll("#carousel-images .card-carrousel");
 
 let idx = 0;
-let tamanho = 33.33;
+let tamanho = 37;
 
 function showNextImage() {
   idx++;
