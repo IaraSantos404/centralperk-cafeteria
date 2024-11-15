@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -33,7 +33,7 @@ body {
   color: var(--text-color);
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--text-color);
 }
@@ -63,7 +63,7 @@ li {
   gap: 70px;
   justify-content: end;
   margin-right: 10%;
-  font-size: 20px;
+  font-size: 18px;
 
 }
 
@@ -73,7 +73,7 @@ li {
   transition: transform 0.2s ease-in-out;
 }
 
-#menu ul li a:hover{
+#menu ul li a:hover {
   color: var(--accent);
 }
 
@@ -84,9 +84,10 @@ li {
 
 /* inicio */
 #inicio {
-  margin: 8% 0 0 10%;
+  margin: 8% 0 0 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -109,12 +110,12 @@ li {
 .fundo-copo {
   background-color: var(--primary);
   border-radius: 50%;
-  margin-right: 20%;
+
 }
 
 .fundo-copo img {
   padding: 20px;
-  max-width: 250px;
+  max-width: 220px;
 }
 
 /* about */
@@ -127,8 +128,14 @@ li {
 #about .sobre {
   display: flex;
   margin-top: 4em;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.textos-about {
+  width: 50%;
 
 }
 
@@ -148,17 +155,17 @@ li {
 }
 
 .sobre img {
-  margin-right: 25%;
+  float: right;
   position: relative;
   bottom: 2em;
   max-width: 400px;
   height: 100%;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out; /* Transição aplicada diretamente à imagem */
+  transition: transform 0.3s ease-in-out;
 }
 
 
-.sobre img:hover{
+.sobre img:hover {
   transform: scale(1.1);
 }
 
@@ -173,6 +180,7 @@ li {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   gap: 50px;
   width: 90%;
@@ -191,9 +199,9 @@ li {
   transition: transform 0.1.5s ease-in-out;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.1);
-  
+
 }
 
 .card-dentro {
@@ -275,7 +283,8 @@ li {
 
 }
 
-.arrow-left:hover, .arrow-right:hover{
+.arrow-left:hover,
+.arrow-right:hover {
   background-color: rgba(220, 167, 101, 0.6);
 }
 
@@ -431,15 +440,168 @@ footer {
   border-top: 3px solid var(--primary);
 }
 
-.icon{
+.icon {
   display: flex;
   gap: 8px;
   margin-bottom: 15px;
   color: white;
 }
 
-.icon:hover{
+.icon:hover {
   cursor: pointer;
   color: #dca765;
 }
 
+
+/* RESPONSIVIDADE */
+
+#hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  
+
+  /* about */
+  #about {
+    margin-top: 10em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  #about .sobre {
+    display: flex;
+    margin-top: 4em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  .textos-about {
+    width: 100%;
+    margin-right: 10%;
+  }
+
+  .textos-about p {
+    margin: auto;
+    text-align: center;
+  }
+
+  .textos-about .p1 {
+    font-size: 40px;
+
+  }
+
+  .textos-about .p2 {
+    font-size: 24px;
+  }
+
+  .sobre img {
+    position: relative;
+    top: 3em;
+    max-width: 100%;
+    margin-right: 3em;
+  }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .topico {
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  /*menu*/
+  #menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #menu ul {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background-color: var(--primary);
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  #menu ul li a{
+    color: var(--accent);
+  }
+
+  #menu ul.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+    margin-right: 10%;
+    color: var(--accent);
+  }
+
+  /* inicio */
+
+  #inicio {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+  }
+
+  #inicio h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+  }
+
+  #inicio p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .fundo-copo {
+    display: none;
+  }
+
+  /* about */
+  #about {
+    margin-top: 3em;
+  }
+
+  .textos-about {
+    margin: 0;
+  }
+
+  .textos-about .p1 {
+    font-size: 22px;
+  }
+
+  .textos-about .p2{
+    font-size: 16px;
+  }
+
+  .sobre img{
+    margin: 0;
+  }
+
+  /* cardapio */
+
+  .cards .card{
+    margin-left: auto;
+  }
+
+
+}
