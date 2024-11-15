@@ -1,27 +1,50 @@
+/* Geral */
 * {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary: #dca765;
   --span-color: #c5812d;
+  --accent: #f0f0f0;
+  --text-color: #333;
 }
 
 .topico {
   margin-left: 10%;
 }
 
+h2 {
+  font-size: 28px;
+}
+
 h2 span {
   border-bottom: 3px solid var(--span-color);
+}
+
+body {
+  background-color: var(--accent);
+  color: var(--text-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 
 /* Header */
 header {
-  background-color: var(--primary);
   width: 100%;
+  background-color: var(--primary);
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 li {
@@ -40,6 +63,18 @@ li {
   gap: 70px;
   justify-content: end;
   margin-right: 10%;
+  font-size: 20px;
+
+}
+
+#menu ul li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+#menu ul li a:hover{
+  color: var(--accent);
 }
 
 #menu img {
@@ -56,8 +91,9 @@ li {
 }
 
 #inicio h1 {
-  font-size: 40px;
+  font-size: 55px;
   font-weight: bold;
+
 }
 
 #inicio h1 span {
@@ -66,7 +102,8 @@ li {
 
 .textos-inicio p {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 22px;
+  color: #666;
 }
 
 .fundo-copo {
@@ -83,23 +120,28 @@ li {
 /* about */
 #about {
   margin-top: 10em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 #about .sobre {
   display: flex;
   margin-top: 4em;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .textos-about .p1 {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 500;
   width: 60%;
   color: #2F2105;
 }
 
 .textos-about .p2 {
-  width: 50%;
-  font-size: 17px;
+  width: 60%;
+  font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
   margin-top: 1em;
   font-weight: lighter;
@@ -109,6 +151,15 @@ li {
   margin-right: 25%;
   position: relative;
   bottom: 2em;
+  max-width: 400px;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Transição aplicada diretamente à imagem */
+}
+
+
+.sobre img:hover{
+  transform: scale(1.1);
 }
 
 /* cardapio */
@@ -136,6 +187,13 @@ li {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1.5s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  
 }
 
 .card-dentro {
@@ -147,17 +205,22 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 8px;
+  text-align: center;
 }
 
 .card-dentro img {
   margin: 35px 40px 0 40px;
   border-radius: 12px;
   height: 155px;
+
+
 }
 
 .card-dentro p {
   display: flex;
-  padding: 15px 25px 60px 25px;
+  margin: 15px 25px 50px 25px;
   font-weight: 600;
 }
 
@@ -165,9 +228,16 @@ li {
   padding-left: 20px;
 }
 
+
+.preco p {
+  font-size: 16px;
+}
+
 /* Avaliações */
 #avaliacoes {
   margin-top: 7em;
+
+
 }
 
 .carousel {
@@ -181,6 +251,8 @@ li {
   justify-content: center;
   /* margin-right: 10%; */
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 
@@ -197,11 +269,16 @@ li {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.1);
   padding: 12px;
   border-radius: 100%;
-  
+  background-color: rgba(220, 167, 101, 0.8);
+
 }
+
+.arrow-left:hover, .arrow-right:hover{
+  background-color: rgba(220, 167, 101, 0.6);
+}
+
 
 .arrow-right {
   right: 0;
@@ -221,6 +298,7 @@ li {
   margin-right: 10%;
   display: flex;
   transition: transform 0.5s ease-in-out;
+
 }
 
 
@@ -234,13 +312,24 @@ li {
   flex-shrink: 0;
   object-fit: cover;
 
+  background-color: var(--accent);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 
+}
+
+.card-carrousel:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
 }
 
 .infors {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+
 }
 
 
@@ -248,6 +337,7 @@ li {
   padding: 8px;
   position: relative;
   right: 1px;
+  font-size: 14px;
 }
 
 .infors img {
@@ -257,15 +347,16 @@ li {
 
 .infors .name {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   margin: 5px 0;
   color: #333;
 }
 
-.review{
+.review {
   width: 250px;
   font-size: 14px;
   margin: 3px;
+  color: #555;
 }
 
 .person {
@@ -285,3 +376,70 @@ li {
   color: #ffd700;
   margin: 5px 0;
 }
+
+/* Footer */
+footer {
+  background-color: var(--text-color);
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  margin-top: 15em;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #dca765;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  font-size: 14px;
+  border-top: 3px solid var(--primary);
+}
+
+.icon{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.icon:hover{
+  cursor: pointer;
+  color: #dca765;
+}
+

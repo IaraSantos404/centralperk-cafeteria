@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imgs/logo.png" type="image/x-icon">
   <title>CentralPerk cafeteria</title>
 </head>
 
@@ -13,15 +14,15 @@
     <nav id="menu">
       <img src="imgs/logo.png" width="110px" height="65px" alt="">
       <ul>
-        <li>Inicio</li>
-        <li>Sobre nós</li>
-        <li>Cardápio</li>
-        <li>Avaliações</li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#about">Sobre nós</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
       </ul>
     </nav>
   </header>
 
-  <div id="inicio" class="topico">
+  <section id="inicio" class="topico">
     <div class="textos-inicio">
       <h1>Sejam bem vindos <br>ao <span>Central perk</span></h1>
       <p>Onde Amigos e Café se Encontram,<br>aquecendo Corações Desde 1994.</p>
@@ -29,24 +30,26 @@
     <div class="fundo-copo">
       <img src="imgs/copo.png" alt="">
     </div>
-  </div>
+  </section>
 
-  <div id="about" class="topico">
-    <h2>Sobre <span>nós</span></h2>
-    <div class="sobre">
-      <div class="textos-about">
-        <p class="p1">Central Perk, onde as conexões humanas e um bom café aquecem a alma.</p>
-        <p class="p2">Desde 1994, o Central Perk tem sido mais do que apenas uma cafeteria – é um ponto de encontro onde
-          amizades florescem, o riso enche o ar e cada xícara é um momento para saborear. Com hospitalidade calorosa e
-          café cuidadosamente preparado, convidamos você a relaxar, conectar-se e criar memórias no coração de Nova
-          York.</p>
+  <section id="about">
+    <div class="topico">
+      <h2>Sobre <span>nós</span></h2>
+      <div class="sobre">
+        <div class="textos-about">
+          <p class="p1">Central Perk, onde as conexões humanas e um bom café aquecem a alma.</p>
+          <p class="p2">Desde 1994, o Central Perk tem sido mais do que apenas uma cafeteria – é um ponto de encontro,
+            um verdadeiro refúgio dentro da cidade, um lugar onde as pessoas se sentissem em casa. Nossa motivação é
+            criar um espaço onde amizades possam florescer, onde as histórias do dia a dia se entrelaçam ao som de uma
+            boa música e ao aroma de café fresco.</p>
+        </div>
+        <img src="imgs/about-img.png" alt="">
       </div>
-      <img src="imgs/img-about.png" alt="">
     </div>
-  </div>
+  </section>
 
-  <div id="cardapio" class="topico">
-    <h2>Nosso <span>menu</span></h2>
+  <section id="cardapio" class="topico">
+    <h2>Nosso <span>cardápio</span></h2>
     <div class="cards">
       <div class="row">
         <div class="card card1">
@@ -113,9 +116,9 @@
 
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="avaliacoes" class="topico">
+  <section id="avaliacoes" class="topico">
     <h2>Avaliações dos <span>clientes</span></h2>
 
     <div class="carousel">
@@ -208,10 +211,56 @@
       </div>
       <img onclick="showNextImage()" src="imgs/arrow.png" alt="Seta Direita" class="arrow-right">
     </div>
-  </div>
+  </section>
 
   <footer>
-    
+    <div class="footer-container">
+      <div class="footer-section footer-nav">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-contato">
+        <h4>Contato</h4>
+        <a href="https://www.instagram.com/iar.a_santos/profilecard/?igsh=MWxveXhhOWFveXkwaQ==" target="_blank">
+          <div class="icon">
+            <img src="imgs/insta.svg" alt="">
+            <p>Instagram</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/IaraSantos404" target="_blank">
+          <div class="icon">
+            <img src="imgs/github.svg" alt="">
+            <p>Github</p>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/iara-santos-141965287/" target="_blank">
+          <div class="icon">
+            <img src="imgs/linkedin.svg" alt="">
+            <p>Linkedin</p>
+          </div>
+        </a>
+
+
+
+      </div>
+
+      <div class="footer-section footer-horario">
+        <h4>Horário de Funcionamento</h4>
+        <p>Segunda a Sexta: 8:00 - 20:00</p>
+        <p>Sábado e Domingo: 10:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&COPY; Iara Santos</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
