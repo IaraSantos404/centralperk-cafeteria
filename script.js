@@ -1,5 +1,4 @@
 /* Carrossel*/
-
 const imgs = document.getElementById("carousel-images");
 const img = document.querySelectorAll("#carousel-images .card-carrousel");
 
@@ -31,14 +30,12 @@ function updateCarousel() {
   imgs.style.transform = `translateX(-${idx * cardWidth}px)`;
   imgs.style.transition = "transform 0.4s ease-in-out";
 }
-
 window.addEventListener('resize', () => {
   updateCarousel();
 });
 
 
 /* Responsividade do menu */
-
 const hamburger = document.getElementById('hamburger');
 const menu = document.querySelector('#menu ul');
 

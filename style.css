@@ -47,6 +47,10 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#hamburger {
+  display: none;
+}
+
 li {
   list-style: none;
 }
@@ -55,7 +59,6 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 #menu ul {
@@ -64,7 +67,6 @@ li {
   justify-content: end;
   margin-right: 10%;
   font-size: 18px;
-
 }
 
 #menu ul li:hover {
@@ -131,12 +133,10 @@ li {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .textos-about {
   width: 50%;
-
 }
 
 .textos-about .p1 {
@@ -201,7 +201,6 @@ li {
 
 .card:hover {
   transform: scale(1.1);
-
 }
 
 .card-dentro {
@@ -213,7 +212,6 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 8px;
   text-align: center;
 }
@@ -222,8 +220,6 @@ li {
   margin: 35px 40px 0 40px;
   border-radius: 12px;
   height: 155px;
-
-
 }
 
 .card-dentro p {
@@ -244,8 +240,6 @@ li {
 /* Avaliações */
 #avaliacoes {
   margin-top: 7em;
-
-
 }
 
 .carousel {
@@ -261,12 +255,10 @@ li {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-
 }
 
 .carousel img {
   margin: 10px;
-
 }
 
 .arrow-left,
@@ -280,7 +272,6 @@ li {
   padding: 12px;
   border-radius: 100%;
   background-color: rgba(220, 167, 101, 0.8);
-
 }
 
 .arrow-left:hover,
@@ -307,7 +298,6 @@ li {
   margin-right: 10%;
   display: flex;
   transition: transform 0.5s ease-in-out;
-
 }
 
 
@@ -320,12 +310,10 @@ li {
   text-align: center;
   flex-shrink: 0;
   object-fit: cover;
-
   background-color: var(--accent);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-
 }
 
 .card-carrousel:hover {
@@ -338,9 +326,7 @@ li {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-
 }
-
 
 .infors p {
   padding: 8px;
@@ -455,13 +441,7 @@ footer {
 
 /* RESPONSIVIDADE */
 
-#hamburger {
-  display: none;
-}
-
 @media screen and (max-width: 1180px) {
-  
-
   /* about */
   #about {
     margin-top: 10em;
@@ -475,7 +455,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
   }
 
   .textos-about {
@@ -490,7 +469,6 @@ footer {
 
   .textos-about .p1 {
     font-size: 40px;
-
   }
 
   .textos-about .p2 {
@@ -501,12 +479,8 @@ footer {
     position: relative;
     top: 3em;
     max-width: 100%;
-    margin-right: 3em;
   }
-
-
 }
-
 
 @media screen and (max-width: 768px) {
   .topico {
@@ -553,7 +527,6 @@ footer {
   }
 
   /* inicio */
-
   #inicio {
     display: flex;
     justify-content: center;
@@ -596,12 +569,8 @@ footer {
   .sobre img{
     margin: 0;
   }
-
   /* cardapio */
-
   .cards .card{
     margin-left: auto;
   }
-
-
 }
